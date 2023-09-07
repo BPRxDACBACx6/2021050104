@@ -1,0 +1,65 @@
+* {
+    box-sizing: border-box;
+}
+  
+/* Add padding to containers */
+.container {
+    padding: 15px;
+    background-color: white;
+}
+  
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 10px;
+    margin: 0 0 10px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+input[type=submit] {
+    background-color: #59bfff;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;  
+}
+
+input[type=submit]:hover {
+    opacity: 1; 
+}
+
+/* Set a style for the submit button */
+.btn_submit {
+    background-color: #59bfff;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+  
+.btn_submit:hover {
+    opacity: 1;
+}
+
+.container span{
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: red;
+    cursor: pointer;
+    display: none;
+}
+
+.container span i.hide-btn::before{
+    content: "\f070";
+  }

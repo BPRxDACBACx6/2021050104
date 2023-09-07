@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--gọi bộ thư viện w3css vào trang website để sử dụng-->
+             <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <!--sử dụng bộ thư viện icon-->
+             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+             <link rel="stylesheet" href="html/css/style.css">
+        <title>Lập trình html</title>
+        <style>
+    body, h1, h2, h3, h4, h5, h6 {
+        font-family: Arial, Helvetica, sans-serif;
+        }
+.topnav {
+  overflow: hidden;
+  background-color: red;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  border-bottom: 5px solid transparent;
+}
+
+.topnav a:hover {
+  border-bottom: 5px solid white;
+}
+
+.topnav a.active {
+  border-bottom: 5px solid white;
+}
+    .navbar {
+              overflow: hidden;
+              background-color: red;
+            }
+            
+    .navbar a {
+              float: left;
+              font-size: 16px;
+              color: white;
+              text-align: center;
+              padding: 14px 16px;
+              text-decoration: none;
+            }
+            
+    .dropdown {
+              float: left;
+              overflow: hidden;
+            }
+            
+    .dropdown .dropbtn {
+              font-size: 16px;  
+              border: none;
+              outline: white;
+              color: white;
+              padding: 14px 16px;
+              background-color: inherit;
+              font-family: inherit;
+              margin: 0;
+            }
+            
+    .navbar a:hover, .dropdown:hover .dropbtn {
+              background-color: red;
+            }
+            
+    .dropdown-content {
+              display: none;
+              position: absolute;
+              background-color: red;
+              min-width: 160px;
+              z-index: 1;
+            }
+            
+    .dropdown-content a {
+              float: none;
+              color: white;
+              padding: 12px 16px;
+              text-decoration: none;
+              display: block;
+              text-align: left;
+            }
+    .dropdown:hover .dropdown-content {
+              display: block;
+            }
+            
+    .button {
+              background-color:red;
+              border: none;
+              color: white;
+              padding: 16px 32px;
+              text-align: center;
+              text-decoration: none;
+              display: inline-block;
+              font-size: 16px;
+              margin: 4px 2px;
+              cursor: pointer;
+        }
+        .btn-group button {
+  background-color: red; /* Green background */
+  border: 2px solid black; /* Green border */
+  color: white; /* White text */
+  padding: 10px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  float: left; /* Float the buttons side by side */
+}
+
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.btn-group button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+
+            
+    a {
+              color: black;
+        }
+    ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+          background-color: red;
+        }
+                    
+    li {
+          float: left;
+         }
+                    
+    li a {
+          display: block;
+          color: black;
+          text-align: center;
+          padding: 30px 30px;
+          text-decoration: none;
+                    }
+                    
+                    li a:hover {
+                      background-color: #111;
+                    }
+                    li {
+              display: inline;
+            }
+                    table {
+                       border-collapse: collapse;
+                       border-spacing: 0;
+                       width: 100%;
+                       border: 1px solid black;
+                     }
+            
+                    th, td {
+                       text-align: center;
+                       padding: 16px;
+                     }
+            
+                    tr:nth-child(even) {
+                       background-color: lightgrey
+                     }
+                </style>
+    </head>
+<body>
+<header>
+    <div class="w3-container">
+        <h1>Manchester United Football Club</h1>
+        <p>Câu lạc bộ bóng đá Manchester United</p>
+    </div>
+</header>
+    <div class="w3-row">
+        <div class="w3-col s1 w3-white w3-left">
+            <img style="width:100px;height: 100px;" 
+                src="https://upload.wikimedia.org/wikipedia/vi/thumb/a/a1/Man_Utd_FC_.svg/330px-Man_Utd_FC_.svg.png" alt=""></div>
+                <div class="w3-col s11 w3-red w3-left" >
+                    <div class="navbar" style="padding: 25px;">
+                        <div>
+                            <a href="#"><button class="w3-bar-item w3-button w3-hover-none " onclick="openTab('Home')">Home</button></a>
+                        </div>
+                       
+                        <div class="dropdown" class="topnav">
+                              <button class="dropbtn">News
+                                <i class="fa fa-caret-down"></i>
+                              </button>
+                              <div class="dropdown-content">
+                                <a href="#"><button class="w3-bar-item w3-button w3-hover-none " onclick="openTab('Latest')">Latest</button></a>
+                                <a href="#"><button class="w3-bar-item w3-button w3-hover-none " onclick="openTab('Men')">Men</button></a>
+                                <a href="#"><button class="w3-bar-item w3-button w3-hover-none " onclick="openTab('Women')">Women</button></a>
+                                <a href="#"><button class="w3-bar-item w3-button w3-hover-none " onclick="openTab('Academy')">Academy</button></a>
+                                <a href="#"><button class="w3-bar-item w3-button w3-hover-none " onclick="openTab('eSports')">eSports</button></a>
+                                <a href="#"><button class="w3-bar-item w3-button w3-hover-none " onclick="openTab('Transfers & Loans')">Transfers & Loans</button></a>
+                              </div>
+                            </div> 
+                              <div class="dropdown" class="topnav">
+                              <button class="dropbtn">Fixtures & Results
+                                <i class="fa fa-caret-down"></i>
+                              </button>
+                              <div class="dropdown-content">
+                                <a href="#"><button class="w3-bar-item w3-button w3-hover-none " onclick="openTab('Fixtures')">Fixtures</button></a>
+                                <a href="#"><button class="w3-bar-item w3-button w3-hover-none " onclick="openTab('Results')">Results</button></a>
+                              </div>
+                            </div>
+                              <div class="dropdown" class="topnav">
+                              <button class="dropbtn">Players
+                                <i class="fa fa-caret-down"></i>
+                              </button>
+                              <div class="dropdown-content">
+                                <div class="dropdown-content">
+                                    <a href="#"><button class="w3-bar-item w3-button w3-hover-none " onclick="openTab('Men')">Men</button></a>
+                                    <a href="#"><button class="w3-bar-item w3-button w3-hover-none " onclick="openTab('Women')">Women</button></a>
+                                    <a href="#"><button class="w3-bar-item w3-button w3-hover-none " onclick="openTab('Under-21s')">Under-21s</button></a>
+                                    <a href="#"><button class="w3-bar-item w3-button w3-hover-none " onclick="openTab('Under-18s')">Under-18s</button></a>
+                                    <a href="#"><button class="w3-bar-item w3-button w3-hover-none " onclick="openTab('Legends')">Legends</button></a>
+                                  </div>
+                              </div>
+                            </div>
+                            <div class="dropdown" class="topnav">
+                                <button class="dropbtn">History
+                                  <i class="fa fa-caret-down"></i>
+                                </button>
+                                <div class="dropdown-content">
+                                  <a href="#"><button class="w3-bar-item w3-button w3-hover-none " onclick="openTab('History by Decade')">History by Decade</button></a>
+                                  <a href="#"><button class="w3-bar-item w3-button w3-hover-none " onclick="openTab('Trophy Room')">Trophy Room</button></a>
+                                  <a href="#"><button class="w3-bar-item w3-button w3-hover-none " onclick="openTab('Munich Remembered')">Munich Remembered</button></a>
+                                  <a href="#"><button class="w3-bar-item w3-button w3-hover-none " onclick="openTab('Legends')">Legends</button></a>
+                                </div>
+                              </div> 
+                            <div class="dropdown" class="topnav">
+                                <button class="dropbtn">More
+                                  <i class="fa fa-caret-down"></i>
+                                </button>
+                                <div class="dropdown-content">
+                                  <a href="#"><button class="w3-bar-item w3-button w3-hover-none " onclick="openTab('Latest')">Latest</button></a>
+                                  <a href="#"><button class="w3-bar-item w3-button w3-hover-none " onclick="openTab('Men')">Men</button></a>
+                                  <a href="#"><button class="w3-bar-item w3-button w3-hover-none " onclick="openTab('Women')">Women</button></a>
+                                  <a href="#"><button class="w3-bar-item w3-button w3-hover-none " onclick="openTab('Academy')">Academy</button></a>
+                                  <a href="#"><button class="w3-bar-item w3-button w3-hover-none " onclick="openTab('eSports')">eSports</button></a>
+                                  <a href="#"><button class="w3-bar-item w3-button w3-hover-none " onclick="openTab('Transfers & Loans')">Transfers & Loans</button></a>
+                                </div>
+                              </div> 
+                          </div>
+                      </div>
+                </div>
+                <div id="Home" class="tabcontent" style="display:none">
+                  <div id="Home" class="w3-container tab">
+                    <div class="w3-container">
+                        <img style="width:2048px;height: 1365px"
+                            src="images/296436348_10159519874972746_5693737395386646132_n.jpg"    alt="">
+            </div>
+            </div>
+                  </div> 
+
+    <div id="News" class="w3-container tab">
+    <div class="w3-container">
+  
+    </div>
+        
+    </div>
+
+    <div id="Fixtures" class="w3-container tab" style="display:none">
+<br>
+    <div class="btn-group" style="width:100%">
+          <button style="width:25%">Men</button>
+          <button style="width:25%">Women</button>
+          <button style="width:25%">Under-21s</button>
+          <button style="width:25%">Under-18s</button>
+    </div>
+    <div class="tab">
+      <button class="tablinks" onclick="openCity(event, 'Men')">Men</button>
+      <button class="tablinks" onclick="openCity(event, 'Women')">Women</button>
+      <button class="tablinks" onclick="openCity(event, 'Under-21s')">Under-21s</button>
+      <button class="tablinks" onclick="openCity(event, 'Under-18s')">Under-18s</button>
+    </div>
+    
+    <div id="Men" class="tabcontent">
+      <h3>Fixtures</h3>
+      <p>Paris is the capital of France.</p> 
+    </div>
+    
+    <div id="Women" class="tabcontent">
+      <h3>Tokyo</h3>
+      <p>Tokyo is the capital of Japan.</p>
+    </div>
+    
+    <div id="Under-21s" class="tabcontent">
+      <h3>Fixtures</h3>
+      <p>Paris is the capital of France.</p> 
+    </div>
+    
+    <div id="Under-18s" class="tabcontent">
+      <h3>Tokyo</h3>
+      <p>Tokyo is the capital of Japan.</p>
+    </div>
+        <table class="center" style="padding: auto;">
+            <div class="w3-container w3-center">
+                <h2>Fixtures</h2>
+              </div>
+            <h3>OCTOBER 2022</h3>
+            <thead>
+                <tr class="w3-red">
+                    <th>Home</th>
+                    <th>Time</th>
+                    <th>Date</th>
+                    <th>Away</th>
+                </tr>
+              </thead>
+            <tr>
+                <td>Everton</td>
+                <td>01:00</td>
+                <td></td>
+                <td>Manchester United</td>
+              </tr>
+            <tr>
+                <td>Manchester United</td>
+                <td>02:00</td>
+                <td></td>
+                <td>Omonica Nicosia</td>
+              </tr>
+            <tr>
+                <td>Manchester United</td>
+                <td>20:00</td>
+                <td></td>
+                <td>Newastle United</td>
+              </tr>
+            <tr>
+                <td>Manchester United</td>
+                <td>02:15</td>
+                <td></td>
+                <td>Tottenham Hotspurs</td>
+              </tr>
+            <tr>
+                <td>Chelsea</td>
+                <td>23:30</td>
+                <td></td>
+                <td>Manchester United</td>
+              </tr>
+            <tr>
+                <td>Manchester United</td>
+                <td>02:00</td>
+                <td></td>
+                <td>Sheriff</td>
+              </tr>
+            <tr>
+                <td>Manchester United</td>
+                <td>23:15</td>
+                <td></td>
+                <td>West Ham</td>
+              </tr>
+          </table>
+          <h3>NOVEMBER 2022</h3>
+        <p></p> 
+    </div>
+
+ 
+
+    <div id="Results" class="w3-container tab" style="display:none">
+        <div class="w3-container w3-center">
+            <h2>Results</h2>
+          </div>
+          <h3>AUGUST 2022</h3>
+        </div>
+      
+    <div id="Men" class="w3-container tab" style="display:none">
+        <h2>Players</h2>
+        <table class="w3-table w3-bordered">
+            <thead>
+                <tr class="w3-red">
+                    <th>No.</th>
+                    <th>Position</th>
+                    <th>Nation</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Note</th>
+                </tr>
+              </thead>
+            <tr>
+                <td>1</td>
+                <td>GK</td>
+                <td>Spain</td>
+                <td>David</td>
+                <td>De Gea</td>
+              </tr>
+            <tr>
+                <td>2</td>
+                <td>DF</td>
+                <td>Sweden</td>
+                <td>Victor</td>
+                <td>Lindelöf</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>DF</td>
+                <td>England</td>
+                <td>Phil</td>
+                <td>Jones</td>
+              </tr>
+            <tr>
+                <td>5</td>
+                <td>DF</td>
+                <td>England</td>
+                <td>Harry</td>
+                <td>Maguire</td>
+                <td>(captain)</td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>DF</td>
+                <td>Argentina</td>
+                <td>Lisandro</td>
+                <td>Martínez</td>
+              </tr>
+            <tr>
+                <td>7</td>
+                <td>FW</td>
+                <td>Portugal</td>
+                <td>Cristiano</td>
+                <td>Ronaldo</td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>MF</td>
+                <td>Portugal</td>
+                <td>Bruno</td>
+                <td>Fernandes</td>
+                <td>(vice-captain)</td>
+              </tr>
+            <tr>
+                <td>9</td>
+                <td>FW</td>
+                <td>France</td>
+                <td>Anthony</td>
+                <td>Martial</td>
+              </tr>
+              <tr>
+                <td>10</td>
+                <td>FW</td>
+                <td>England</td>
+                <td>Marcus</td>
+                <td>Rashford</td>
+              </tr>
+            <tr>
+                <td>11</td>
+                <td>FW</td>
+                <td>England</td>
+                <td>Mason</td>
+                <td>Greenwood</td>
+              </tr>
+              <tr>
+                <td>12</td>
+                <td>DW</td>
+                <td>Netherlands</td>
+                <td>Tyrell</td>
+                <td>Malacia</td>
+              </tr>
+            <tr>
+                <td>14</td>
+                <td>MF</td>
+                <td>Denmark</td>
+                <td>hristian</td>
+                <td>Eriksen</td>
+              </tr>
+              <tr>
+                <td>17</td>
+                <td>MF</td>
+                <td>Brazil</td>
+                <td></td>
+                <td>Fred</td>
+              </tr>
+            <tr>
+                <td>18</td>
+                <td>MF</td>
+                <td>Brazil</td>
+                <td></td>
+                <td>Casemiro</td>
+              </tr>
+              <tr>
+                <td>19</td>
+                <td>DF</td>
+                <td>France</td>
+                <td>Raphaël</td>
+                <td>Varane</td>
+              </tr>
+            <tr>
+                <td>20</td>
+                <td>DF</td>
+                <td>Portugal</td>
+                <td>Diogo</td>
+                <td>Dalot</td>
+              </tr>
+              <tr>
+                <td>21</td>
+                <td>FW</td>
+                <td>Brazil</td>
+                <td></td>
+                <td>Antony</td>
+              </tr>
+            <tr>
+                <td>22</td>
+                <td>GK</td>
+                <td>England</td>
+                <td>Tom</td>
+                <td>Heaton</td>
+              </tr>
+              <tr>
+                <td>23</td>
+                <td>DF</td>
+                <td>England</td>
+                <td>Luke</td>
+                <td>Shaw</td>
+              </tr>
+            <tr>
+                <td>25</td>
+                <td>FW</td>
+                <td>England</td>
+                <td>Jadon</td>
+                <td>Sancho</td>
+              </tr>
+              <tr>
+                <td>28</td>
+                <td>FW</td>
+                <td>Uruguay</td>
+                <td>Facundo</td>
+                <td>Pellistri</td>
+              </tr>
+            <tr>
+                <td>29</td>
+                <td>DF</td>
+                <td>England</td>
+                <td>Aaron</td>
+                <td>Wan-Bissaka</td>
+              </tr>
+              <tr>
+                <td>31</td>
+                <td>GK</td>
+                <td>Slovakia</td>
+                <td>Martin</td>
+                <td>Dúbravka</td>
+                <td>(on loan from Newcastle United)</td>
+              </tr>
+            <tr>
+                <td>33</td>
+                <td>DF</td>
+                <td>England</td>
+                <td>Brandon</td>
+                <td>Williams</td>
+              </tr>
+              <tr>
+                <td>34</td>
+                <td>MF</td>
+                <td>Netherlands</td>
+                <td>Donny</td>
+                <td>van de Beek</td>
+              </tr>
+              <tr>
+                <td>36</td>
+                <td>FW</td>
+                <td>Sweden</td>
+                <td>Anthony</td>
+                <td>Elanga</td>
+              </tr>
+            <tr>
+                <td>38</td>
+                <td>DF</td>
+                <td>England</td>
+                <td>Axel</td>
+                <td>Tuanzebe</td>
+              </tr>
+            <tr>
+                <td>39</td>
+                <td>MF</td>
+                <td>Scotland</td>
+                <td>Scott</td>
+                <td>Mctominay</td>
+              </tr>
+            <tr>
+                <td>43</td>
+                <td>DF</td>
+                <td>England</td>
+                <td>Teden</td>
+                <td>Mengi</td>
+              </tr>
+              <tr>
+                <td>47</td>
+                <td>FW</td>
+                <td>England</td>
+                <td>Shola</td>
+                <td>Shoretire</td>
+              </tr>
+            <tr>
+                <td>49</td>
+                <td>FW</td>
+                <td>Argentina</td>
+                <td>Alejandro</td>
+                <td>Garnacho</td>
+              </tr>
+          </table>
+        <p></p>
+    </div>
+<div id="Legends" class="w3-container tab" style="display:none">
+<h2>Top Appearances</h2>
+
+<h2>Top Scorers</h2>
+
+</div>
+    <div class="w3-container">
+        <div id="About" class="w3-container tab" style="display:none">
+        <h2>About</h2>
+        <p>Câu lạc bộ bóng đá Manchester United (tiếng Anh: Manchester United Football Club, hay ngắn gọn là MU hay Man Utd) là một câu lạc bộ bóng đá chuyên nghiệp có trụ sở tại Old Trafford, Đại Manchester, Anh. Câu lạc bộ hiện đang chơi tại Giải bóng đá Ngoại hạng Anh, giải đấu hàng đầu trong hệ thống bóng đá Anh. Với biệt danh Quỷ Đỏ, câu lạc bộ được thành lập dưới tên Newton Heath LYR Football Club vào năm 1878, đổi tên thành Manchester United vào năm 1902 và chuyển đến sân vận động hiện tại, Old Trafford, vào năm 1910.</p>
+        <p>Manchester United là một trong những câu lạc bộ thành công nhất tại Anh, giữ kỷ lục 20 lần vô địch bóng đá Anh, đoạt 12 Cúp FA, 5 Cúp Liên đoàn và giữ kỷ lục 21 lần đoạt Siêu cúp Anh. Câu lạc bộ đã giành được 3 Cúp C1 châu Âu/UEFA Champions League, 1 UEFA Cup Winners' Cup, 1 UEFA Europa league, 1 Siêu cúp châu Âu, 1 Cúp Liên lục địa và 1 FIFA Club World Cup. Trong mùa giải 1998–99, Manchester United trở thành đội bóng Anh đầu tiên và duy nhất giành cú ăn ba trong một mùa giải, gồm các chức vô địch Ngoại hạng Anh, cúp FA và UEFA Champions League.</p>
+    </div>
+    </div>
+    
+    <div>
+        
+    </div>
+<script>
+
+</script>
+
+</body>
+</html>

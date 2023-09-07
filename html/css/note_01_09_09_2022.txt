@@ -1,0 +1,21 @@
+2 phương pháp: database first (áp dụng với sv), code first (đi làm CRUD model)
+class sinhvien:
+	string hoten = hoten:varchar, text
+	int age = age:int
+
+1 trang website tin tức:
+- xác định đối tượng sử dụng: actors (người tương tác với hệ thống):
+	+ người đọc: đọc tin tức, tìm kiếm tin tức, bình luận các bài viết (đăng nhập và đăng ký)
+	+ người quản trị: thêm, sửa, xóa, phân quyền đối với tin tức
+- Bảng dữ liệu
+	+ người dùng: mã người dùng, tên đăng nhập, mật khẩu, vv, sđt
+	+ bản tin: mã tin (khóa chính), mã danh mục, tiêu đề, ảnh đại diện, mô tả ngắn, người đăng, ngày đăng, bình luận
+- hiển thị 10 bản tin mới nhất
+- tin tức sẽ được gom nhóm theo loại: danh mục bản tin: mã danh mục, tên danh mục
+- bình luận: mã bình luận, mã tin, người bình luận, thông tin bình luận
+mối quan hệ giữa các bảng dữ liệu: 1-1,1-n, n-n
++ tin tức(1,n)     danh muc(1,1):1-n lấy khóa chính của bảng 1 đặt làm khóa ngoại của bảng nhiều
++ tin tức(1,1)			bình luận (n,1): 1-n
+
+tìm kiếm sp -> so sánh sp với sp khác cùng loại -> có khuyễn mãi hay ko -> đánh giá từ người dùng khác
+-> cho vào giỏ hàng -> thanh toán (COD, mastercard, chuyển khoản) -> theo dõi đơn hàng 

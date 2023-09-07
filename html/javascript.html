@@ -1,0 +1,111 @@
+<html>
+    <head>
+        <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+        <script src="https://cdn.ckeditor.com/4.19.1/standard/ckeditor.js"></script>
+        <script>
+            //comment trên 1 dòng
+            /*Comment trên nhiều dòng*/
+            // var a = 10;
+            // var b = 2.0;
+            // var s = "<h1 style='color:red;'>xin chào lớp phát triển ứng dụng web 01</h1>";
+            //hiển thị ra bên ngoài trang web
+            // document.writeln(s);
+            // console.log(s)
+            //khai báo hàm trong javascript
+            // function tinhtong(a,b){
+            //     return a+b
+            // }
+            // alert(tinhtong(5,6))
+            // Sử dụng chuẩn ES6
+            // let x1 = 100;
+            // var x = tinhtong = (a,b) => {
+            //     return a+b;
+            // }
+            // var y = tinhnhan =>{
+            //     return 2*3;
+            // }
+            // alert(y())
+            // function tinhtong(){
+            //     var a = Number(document.getElementById("so_a").value);
+            //     var b = Number(document.getElementById("so_b").value);
+            //     var c = a+b;
+            //     alert("tổng của 2 số a và b là: " + c)
+            // }
+            function get_content(){
+                document.getElementById("nd").innerHTML = document.getElementById("noidung").value;
+            }
+        </script>
+        <!-- <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script> -->
+        <link rel="stylesheet" href="css/w3.css">
+        <!-- sử dụng jquery offline -->
+        <script src="js/jquery-3.6.1.min.js"></script>
+        
+        <style>
+            #color{
+                border:2px solid red;
+                width:60%;
+                height:300px;
+
+            }
+            .red{
+                background: red;
+            }
+            .green{
+                background: green;
+            }
+            .yellow{
+                background: yellow;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="">
+            Nhâp vào số a:
+            <input type="text" id="so_a">
+            Nhập vào số b:
+            <input type="text" name="" id="so_b">
+            <!-- <button onclick="tinhtong();">tính tổng</button> -->
+            <button id="tt">Tính tổng bằng Jquery</button>
+            Nhập vào đoạn văn bản:
+            <textarea onkeydown="get_content();" name="" id="noidung" cols="30" rows="10"></textarea>
+            <h1 id="nd"></h1>
+        </form>
+
+        <textarea name="editor2"></textarea>
+                <script>
+                        CKEDITOR.replace( 'editor2' );
+                </script>
+
+        <div id="color">
+
+        </div>
+        <p id="r" class="w3-btn w3-red">Red</p>
+        <p id="g" class="w3-btn w3-green">Green</p>
+        <p id="y" class="w3-btn w3-yellow">yellow</p>
+        <script>
+            $(document).ready(function(){
+                $("#tt").click(function(){
+                    var a = $("#so_a").val();
+                    var b = $("#so_b").val();
+                    alert(a+b)
+                })
+                //đổi màu sắc
+                $("#r").click(function(){
+                    $("#color").removeClass("green");
+                    $("#color").removeClass("yellow");
+                    $("#color").addClass("red");
+                })
+                $("#g").click(function(){
+                    $("#color").removeClass("red");
+                    $("#color").removeClass("yellow");
+                    $("#color").addClass("green");
+                })
+                $("#y").click(function(){
+                    $("#color").removeClass("green");
+                    $("#color").removeClass("red");
+                    $("#color").addClass("yellow");
+                })
+            })
+        </script>
+    </body>
+</html>
